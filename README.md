@@ -16,9 +16,8 @@ export it to `GOOGLE_CREDENTIALS`.
 
 Go to *Settings and sharing* for the Google Calendar you'd like to use.
 Share it with the service account by entering the e-mail address of the
-service account in *Share with specific people*.
-
-Export the calendar ID to `GOOGLE_CALENDAR_ID`:
+service account in *Share with specific people*. Export the calendar ID
+to `GOOGLE_CALENDAR_ID`.
 
 ### Create a Slack bot
 
