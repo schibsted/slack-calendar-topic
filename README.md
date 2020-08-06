@@ -28,3 +28,20 @@ its access token to `SLACK_ACCESS_TOKEN`.
 
 Export the ID for the Slack channel you'd like to use to `SLACK_CHANNEL_ID`. It can
 be tricky to find, but [here's how](https://www.google.com/search?q=how+to+find+channel+id+slack).
+
+## Deploying
+
+#### Anywhere you want
+
+You can deploy this script anywhere that runs Node and has some mechanism for running it on
+a schedule (as often as you want to check, basically).
+
+#### AWS Lambda
+
+It's a particularly good fit for Lambda, and a simple deployment script is included in
+`deploy.sh`. Run it like so:
+
+```bash
+$ AWS_LAMBDA_NAME=slack-calendar-topic ./deploy.sh
+```
+
