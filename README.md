@@ -20,6 +20,11 @@ service account in *Share with specific people*.
 
 Export the calendar ID to `GOOGLE_CALENDAR_ID`:
 
+### Create a Slack bot
+
+Create a Slack bot with scopes `channels:manage` and `channels:read`, and export
+its access token to `SLACK_ACCESS_TOKEN`.
+
 ### Select a channel
 
 Export the ID for the Slack channel you'd like to use to `SLACK_CHANNEL_ID`. It can
