@@ -58,10 +58,9 @@ a schedule (as often as you want to check, basically).
 
 #### AWS Lambda
 
-It's a particularly good fit for Lambda, and a simple deployment script is included in
-`deploy.sh`. Run it like so:
+It's a particularly good fit for Lambda with a scheduled CloudWatch trigger, and a simple
+deployment script is included in `deploy.sh`. Run it like so:
 
 ```bash
 $ AWS_LAMBDA_NAME=slack-calendar-topic ./deploy.sh
 ```
-
