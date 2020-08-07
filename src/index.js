@@ -1,12 +1,20 @@
 const { getOngoingEvent } = require('./calendar');
-const { setTopic } = require('./slack');
+const { setTopic, getTopic } = require('./slack');
+const { normalizeString } = require('./utils');
 
 exports.update = async function() {
   const event = await getOngoingEvent();
 
   if (event) {
-    const topic = await setTopic(event.summary);
-    return `Set topic to '${event.summary}'`;
+    const newTopic = event.summary;
+    const currentTopic = await getTopic();
+
+    if (normalizeString(newTopic) == normalizeString(currentTopic)) {
+      return 'Topic already set';
+    }
+
+    const topic = await setTopic(newTopic);
+    return `Set topic to '${newTopic}'`;
   } else {
     return 'No ongoing event';
   }
