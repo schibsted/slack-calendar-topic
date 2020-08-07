@@ -25,10 +25,6 @@ Go to *Settings and sharing* for the Google Calendar you'd like to use.
 Share it with the service account by entering the e-mail address of the
 service account in *Share with specific people*.
 
-#### Select a channel
-
-Export the ID for the Slack channel you'd like to use to `SLACK_CHANNEL_ID`.
-
 #### Connect the calendars and channels
 
 Create a mapping between calendars and channels like so, and export it to
