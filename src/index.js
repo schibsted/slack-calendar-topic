@@ -1,14 +1,8 @@
 const { getOngoingEvent } = require('./calendar');
 const { setTopic, getChannelInfo } = require('./slack');
-const { normalizeString } = require('./utils');
+const { normalizeString, parseEnvironmentVariableAsJSON } = require('./utils');
 
-const CHANNEL_CALENDAR_MAP = (() => {
-  try {
-    return JSON.parse(process.env.CHANNEL_CALENDAR_MAP);
-  } catch (error) {
-    throw Error(`Could not parse $CHANNEL_CALENDAR_MAP as JSON`);
-  }
-})();
+const CHANNEL_CALENDAR_MAP = parseEnvironmentVariableAsJSON('CHANNEL_CALENDAR_MAP');
 
 exports.update = async function() {
   const map = CHANNEL_CALENDAR_MAP.map(async ({ calendarId, channelId }) => {

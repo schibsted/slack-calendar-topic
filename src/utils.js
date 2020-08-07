@@ -8,3 +8,11 @@ exports.normalizeString = function(string) {
     // Remove anything that isn't a letter, number, or punctuation
     .replace(/[^A-Za-z0-9.,:;'" ]/g, '');
 }
+
+exports.parseEnvironmentVariableAsJSON = function(variable) {
+  try {
+    return JSON.parse(process.env[variable]);
+  } catch (error) {
+    throw Error(`Could not parse $${variable} as JSON`);
+  }
+}
