@@ -20,7 +20,7 @@ exports.getOngoingEvent = async function(calendarId) {
       calendarId: calendarId,
       timeMin: now.toISOString(),
       timeMax: soon.toISOString(),
-      maxResults: 2,
+      maxResults: 10,
       singleEvents: true,
       orderBy: 'startTime'
     }, (err, res) => {
