@@ -44,8 +44,15 @@ Create a mapping between calendars and channels like so, and export it to
 
 #### Run it
 
-That's it! Run it with `npm run update` (or `node ./bin/update`) and watch your channels
-be updated to the currently ongoing events in the corresponding calendars.
+That's it! Run it with `npm run update` (or `./bin/update`) and watch your channels
+be updated to the currently ongoing events in the corresponding calendars:
+
+```sh
+$ ./bin/update
+#backend-bugs: Set topic to 'Person on call: Tuesday talent 🤩'
+#infrastructure-issues: Topic already set
+#petty-problems: No ongoing event
+```
 
 ## Deploying
 
