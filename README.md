@@ -54,7 +54,7 @@ be updated to the currently ongoing event in the corresponding calendar.
 #### Anywhere you want
 
 You can deploy this script anywhere that runs Node and has some mechanism for running it on
-a schedule (as often as you want to check, basically).
+a schedule (like cron).
 
 #### AWS Lambda
 
