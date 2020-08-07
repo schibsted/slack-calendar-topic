@@ -42,6 +42,11 @@ Create a mapping between calendars and channels like so, and export it to
 ]
 ```
 
+#### Run it
+
+That's it! Run it with `npm run update` (or `node ./bin/update`) and watch your channels
+be updated to the currently ongoing event in the corresponding calendar.
+
 ## Deploying
 
 #### Anywhere you want
