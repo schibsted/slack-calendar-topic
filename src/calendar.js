@@ -21,12 +21,12 @@ exports.getOngoingEvent = async function() {
       calendarId: GOOGLE_CALENDAR_ID,
       timeMin: now.toISOString(),
       timeMax: soon.toISOString(),
-      maxResults: 1,
+      maxResults: 2,
       singleEvents: true,
       orderBy: 'startTime'
     }, (err, res) => {
       if (err) reject(err);
-      resolve(res.data.items[0]);
+      resolve(res.data.items[res.data.items.length - 1]);
     });
   });
 }
