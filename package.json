@@ -8,8 +8,12 @@
     "deploy": "./deploy.sh",
     "test": "mocha"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/schibsted/slack-calendar-topic"
+  },
+  "author": "Johannes Gorset <johannes.gorset@schibsted.com>",
+  "license": "MIT",
   "dependencies": {
     "@slack/web-api": "^5.11.0",
     "googleapis": "^58.0.0"
