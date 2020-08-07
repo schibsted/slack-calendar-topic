@@ -19,13 +19,13 @@ export it to `GOOGLE_CREDENTIALS`.
 Create a Slack bot with scopes `channels:manage` and `channels:read`, and export
 its access token to `SLACK_ACCESS_TOKEN`.
 
-#### Share a calendar with your service account
+#### Share calendar(s) with your service account
 
-Go to *Settings and sharing* for the Google Calendar you'd like to use.
-Share it with the service account by entering the e-mail address of the
-service account in *Share with specific people*.
+Go to **Settings and sharing** for the Google Calendar(s) you'd like to use, and
+share them with the service account by entering the e-mail address of the
+service account in **Share with specific people**.
 
-#### Connect the calendars and channels
+#### Connect calendars and channels
 
 Create a mapping between calendars and channels like so, and export it to
 `CHANNEL_CALENDAR_MAP`:
@@ -43,7 +43,7 @@ Create a mapping between calendars and channels like so, and export it to
 #### Run it
 
 That's it! Run it with `npm run update` (or `node ./bin/update`) and watch your channels
-be updated to the currently ongoing event in the corresponding calendar.
+be updated to the currently ongoing events in the corresponding calendars.
 
 ## Deploying
 
@@ -54,9 +54,8 @@ a schedule (like cron).
 
 #### AWS Lambda
 
-It's a particularly good fit for Lambda with a scheduled CloudWatch trigger, and a simple
-deployment script is included in `deploy.sh`. Run it like so:
+It's a particularly good fit for a [Lambda scheduled with CloudWatch][aws]. Create your lambda,
+set the environment variables, and configure the handler as `lambda.handler`. Then, run
+`AWS_LAMBDA_NAME=slack-calendar-topic ./deploy.sh` to deploy it.
 
-```bash
-$ AWS_LAMBDA_NAME=slack-calendar-topic ./deploy.sh
-```
+[aws]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/RunLambdaSchedule.html
