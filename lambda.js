@@ -1,5 +1,5 @@
 const { update } = require('./src/index');
 
-exports.handler = (event, context) => {
-  console.log(update);
+exports.handler = async (event, context) => {
+  console.log(await update());
 }
