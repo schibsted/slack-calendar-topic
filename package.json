@@ -4,7 +4,7 @@
   "description": "Script to set Slack topic from Google calendar",
   "main": "src/index.js",
   "scripts": {
-    "test": "node test.js",
+    "update": "node ./bin/update.js",
     "deploy": "./deploy.sh"
   },
   "author": "",
