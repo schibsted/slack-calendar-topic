@@ -32,7 +32,7 @@ Export the ID for the Slack channel you'd like to use to `SLACK_CHANNEL_ID`.
 Create a mapping between calendars and channels like so, and export it to
 `CHANNEL_CALENDAR_MAP`:
 
-```json
+```
 [
   {
     "calendarId": "c_413612vkasdr1126ckja82sa0v@group.calendar.google.com",
