@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const { update } = require('../src/index');
 
 (async () => {
