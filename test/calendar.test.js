@@ -63,7 +63,7 @@ describe('getOngoingEvent', () => {
     });
 
   it('returns the ongoing event', async () => {
-    const ongoingEvent = await getOngoingEvent();
+    const ongoingEvent = await getOngoingEvent('<calendarId>');
 
     assert.equal(ongoingEvent.summary, 'Double-booked event');
   });

@@ -1,5 +1,9 @@
 const { update } = require('../src/index');
 
 (async () => {
-  console.log(await update());
+  const statuses = await update();
+
+  statuses.map(status => {
+    console.log(status);
+  });
 })();
