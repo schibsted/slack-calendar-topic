@@ -1,5 +1,7 @@
 # Slack Calendar Topic
 
+[![Build Status](https://travis-ci.com/schibsted/slack-calendar-topic.svg?branch=master)](https://travis-ci.com/schibsted/slack-calendar-topic)
+
 A script that sets the topic of a Slack channel to the currently ongoing event
 in a Google calendar. Great for keeping track of who's on call, for example.
 
