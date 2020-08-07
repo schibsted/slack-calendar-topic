@@ -1,6 +1,5 @@
 const { google } = require('googleapis');
 
-const GOOGLE_CALENDAR_ID = process.env.GOOGLE_CALENDAR_ID;
 const GOOGLE_CREDENTIALS = JSON.parse(process.env.GOOGLE_CREDENTIALS);
 
 const auth = new google.auth.GoogleAuth({
@@ -10,7 +9,7 @@ const auth = new google.auth.GoogleAuth({
 
 const calendar = google.calendar({version: 'v3', auth});
 
-exports.getOngoingEvent = async function() {
+exports.getOngoingEvent = async function(calendarId) {
   // Not one of JavaScript: The good parts
   const now = new Date();
   const soon = new Date()
@@ -18,7 +17,7 @@ exports.getOngoingEvent = async function() {
 
   return new Promise((resolve, reject) => {
     calendar.events.list({
-      calendarId: GOOGLE_CALENDAR_ID,
+      calendarId: calendarId,
       timeMin: now.toISOString(),
       timeMax: soon.toISOString(),
       maxResults: 2,

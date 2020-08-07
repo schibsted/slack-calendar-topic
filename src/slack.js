@@ -1,22 +1,24 @@
 const { WebClient } = require('@slack/web-api');
 
 SLACK_ACCESS_TOKEN = process.env.SLACK_ACCESS_TOKEN;
-SLACK_CHANNEL_ID = process.env.SLACK_CHANNEL_ID;
 
-exports.getTopic = async function() {
+exports.getChannelInfo = async function(channelId) {
   const slack = new WebClient(SLACK_ACCESS_TOKEN);
 
   const info = await slack.conversations.info({
-    channel: SLACK_CHANNEL_ID
+    channel: channelId
   });
 
-  return info.channel.topic.value;
+  return {
+    name: info.channel.name,
+    topic: info.channel.topic.value
+  }
 }
 
-exports.setTopic = async function(topic) {
+exports.setTopic = async function(channelId, topic) {
   const slack = new WebClient(SLACK_ACCESS_TOKEN);
 
   return await slack.conversations.setTopic({
-    channel: SLACK_CHANNEL_ID, topic
+    channel: channelId, topic
   });
 }
