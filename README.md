@@ -27,6 +27,16 @@ Go to **Settings and sharing** for the Google Calendar(s) you'd like to use, and
 share them with the service account by entering the e-mail address of the
 service account in **Share with specific people**.
 
+#### Mentions in calendar events
+
+Open Slack and go to the profile of the user you wish to mention, click the `More` button and then `Copy member ID`. You can now mention that user with `<@{MEMBER-ID}>`
+
+For example, if the desired member id is `F4K3ID123`:
+
+```
+Person on-call: <@F4K3ID123>
+```
+
 #### Connect calendars and channels
 
 Create a mapping between calendars and channels like so, and export it to
