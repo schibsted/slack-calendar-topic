@@ -9,7 +9,7 @@ async function setTopicFromCalendar(calendarId, channelId) {
   const channel = await getChannelInfo(channelId);
 
   if (event) {
-    const newTopic = event.summary;
+    const newTopic = event.description || event.summary;
 
     if (normalizeString(newTopic) == normalizeString(channel.topic)) {
       return `#${channel.name}: Topic already set`;

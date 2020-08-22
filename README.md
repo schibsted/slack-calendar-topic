@@ -29,13 +29,18 @@ service account in **Share with specific people**.
 
 #### Mentions in calendar events
 
-Open Slack and go to the profile of the user you wish to mention, click the `More` button and then `Copy member ID`. You can now mention that user with `<@{MEMBER-ID}>`
+If you want to use mentions in the topic, you need to use Slack's special syntax for
+that. Open Slack and go to the profile of the user you want to mention, click the `More`
+button and then `Copy member ID`. You can now mention that user with `<@{MEMBER-ID}>`
 
-For example, if the desired member id is `F4K3ID123`:
+For example, if the desired member ID is `F4K3ID123`:
 
 ```
 Person on-call: <@F4K3ID123>
 ```
+
+Unfortunately, this can make it hard to read your calendar at a glance. To get around that,
+put your topic in the event description instead of the title, and we'll use that when it's set.
 
 #### Connect calendars and channels
 
