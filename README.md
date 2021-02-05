@@ -71,6 +71,11 @@ $ ./bin/update
 
 ## Deploying
 
+#### Prerequisites
+
+- Log into your AWS Console and retrieve your IAM credentials.
+- Run `aws configure` and follow the steps.
+
 #### Anywhere you want
 
 You can deploy this script anywhere that runs Node and has some mechanism for running it on
