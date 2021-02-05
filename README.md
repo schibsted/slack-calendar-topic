@@ -82,4 +82,9 @@ It's a particularly good fit for a [Lambda scheduled with CloudWatch][aws]. Crea
 set the environment variables, and configure the handler as `lambda.handler`. Then, run
 `AWS_LAMBDA_NAME=slack-calendar-topic ./deploy.sh` to deploy it.
 
+If you haven't already, remember to install and configure your `aws` command line interface first:
+
+- Log into your AWS Console and retrieve your IAM credentials.
+- Run `aws configure` and follow the steps.
+
 [aws]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/RunLambdaSchedule.html
